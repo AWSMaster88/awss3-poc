@@ -40,6 +40,37 @@ bash
 Copy code
 cyclonedx-npm --output-file “bom.json”
 This command will analyze your project's dependencies and generate an XML-based CycloneDX SBOM in the sbom.xml file.
+
+/**pipy 
+GitHub project: https://github.com/CycloneDX/cyclonedx-python
+Slack channel: https://cyclonedx.slack.com/archives/CVA0QJEVA
+Install the CycloneDX python plugin to your python project by running:
+with pip:
+pip install cyclonedx-bom
+Run the below command:
+for pip:
+cyclonedx-py -pip --format json  -o bom.json
+/**Maven
+GitHub project: https://github.com/CycloneDX/cyclonedx-maven-plugin
+Slack channel: https://cyclonedx.slack.com/archives/CVCKP34A2
+Add the CycloneDX Maven plugin to your pom.xml:
+maven
+<plugins>
+    <plugin>
+        <groupId>org.cyclonedx</groupId>
+        <artifactId>cyclonedx-maven-plugin</artifactId>
+        <version>2.7.3</version>
+    </plugin>
+</plugins>
+
+
+There are more configuration options (see the GitHub project for details). But the default should suffice for most cases.
+Run the below command:
+mvn org.cyclonedx:cyclonedx-maven-plugin:makeBom
+
+Find the CycloneDX SBOM JSON under ./target
+
+
 References
 https://docs-vsm.leanix.net/docs/setting-up-the-cyclonedx-sbom-generation#npm
 
