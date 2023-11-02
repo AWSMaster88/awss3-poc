@@ -1,0 +1,45 @@
+Installing npm 
+1. run
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+
+2. Run
+. ~/.nvm/nvm.sh
+3. Run: Installing Node.js also installs the Node Package Manager (npm), so you can install additional modules as needed.
+
+nvm install --lts
+4. Test that Node.js is installed and running correctly by typing the following at the command line.
+
+node -e "console.log('Running Node.js ' + process.version)"
+
+5. Install git
+
+sudo yum -y install git
+
+
+
+
+To generate a Software Bill of Materials (SBOM) for a Node.js project using CycloneDX, you can follow these steps:
+
+Install CycloneDX CLI:
+
+First, you need to install the CycloneDX CLI tool. You can install it using npm (Node Package Manager):
+
+bash
+Copy code
+npm install --global @cyclonedx/cyclonedx-npm
+Navigate to Your Node.js Project:
+
+Open your terminal and navigate to the root directory of your Node.js project.
+
+Generate CycloneDX SBOM:
+
+Run the following command to generate a CycloneDX SBOM for your Node.js project:
+
+bash
+Copy code
+cyclonedx-npm --output-file “bom.json”
+This command will analyze your project's dependencies and generate an XML-based CycloneDX SBOM in the sbom.xml file.
+References
+https://docs-vsm.leanix.net/docs/setting-up-the-cyclonedx-sbom-generation#npm
+
