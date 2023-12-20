@@ -1,0 +1,22 @@
+scp -r /users/Hostinger/desktop root@162.168.1.2:/writing/article
+
+
+ifconfig
+
+scp -i myAmazonKey.pem phpMyAdmin-3.4.5-all-languages.tar.gz ec2-user@mec2-50-17-16-67.compute-1.amazonaws.com:~/.
+
+sshpass -p "REMOTE_USER_PASSWORD" scp -r Some_Directory/ ubuntu@18.118.208.79:/home/ubuntu/
+
+
+
+git config --global credential.helper '!f() { sleep 1; echo "username=git token=<TOKEN>"; }; f'
+
+
+
+
+
+
+
+
+
+
